@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e6eb70339ab485693cf3a6c0a37491, type: 3}
+  m_Name: Terrain
+  m_EditorClassIdentifier: 
+  footstepSounds:
+  - {fileID: 8300000, guid: 5799109e817d3704889f0499d06a23be, type: 3}
+  - {fileID: 8300000, guid: dd26e9057c37e2943993f701a764fc3e, type: 3}
+  jumpSound: {fileID: 8300000, guid: fe175f117cf3fb2428d279bc830a1830, type: 3}
+  landSound: {fileID: 8300000, guid: 8e0c586341010324fadd73453569f0aa, type: 3}
