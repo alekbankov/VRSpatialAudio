@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: ground
   m_EditorClassIdentifier: 
   footstepSounds:
-  - {fileID: 8300000, guid: 6ad0cf00f050bee41a2dee098475dc78, type: 3}
-  - {fileID: 8300000, guid: 7ca5a9710db4327439c9f8cb8204615e, type: 3}
-  jumpSound: {fileID: 8300000, guid: a465f4e2a2f3a354f927f77994a68a08, type: 3}
-  landSound: {fileID: 8300000, guid: c86476186f357d44eb470d68a2986520, type: 3}
+  - {fileID: 8300000, guid: 2f949b40b7283404099a802630fb2077, type: 3}
+  - {fileID: 8300000, guid: dfff2b3c7dfb43c419592789f0a6ab81, type: 3}
+  - {fileID: 8300000, guid: 812100e3982e56842adb6ba5be867b7a, type: 3}
+  - {fileID: 8300000, guid: 83c58d64f2e240c41b1f2c2885b253a6, type: 3}
+  - {fileID: 8300000, guid: 3610d597db7918e44906d575bd074616, type: 3}
+  - {fileID: 8300000, guid: 3701a5fdf99882f40bc00eb9053eec92, type: 3}
+  - {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
+  jumpSound: {fileID: 8300000, guid: 5c39ec0074165fb4eaf789fc68f5379b, type: 3}
+  landSound: {fileID: 8300000, guid: 5c39ec0074165fb4eaf789fc68f5379b, type: 3}
