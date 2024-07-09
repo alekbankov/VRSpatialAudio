@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6645769896899080243}
   - component: {fileID: 1601106317759141774}
   - component: {fileID: 4545172892186780225}
-  - component: {fileID: 2862826049203778784}
+  - component: {fileID: 7072780437200227244}
   m_Layer: 0
   m_Name: PineVariantA
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2862826049203778784
-MeshCollider:
+--- !u!136 &7072780437200227244
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -234032104803814253, guid: 722d070a5aa84eb4a854f796b0589e14, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.56
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0.02, y: 1.41, z: 0.0000006556511}

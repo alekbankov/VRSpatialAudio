@@ -78,6 +78,9 @@ public class Arrow : MonoBehaviour
                     _rigidbody.interpolation = RigidbodyInterpolation.None;
                     transform.parent = hitInfo.transform;
                     body.AddForce(_rigidbody.velocity, ForceMode.Impulse);  
+                }else if (hitInfo.transform.TryGetComponent(out Collider collider))
+                {
+                    PlayHitSound();
                 }
                 Stop();
             }
