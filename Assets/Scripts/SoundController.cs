@@ -24,7 +24,7 @@ public class SoundController : MonoBehaviour
 
     private bool isMoving()
     {
-        return moveButton.action.IsPressed() && _playerJumpReference.isGrounded();
+        return moveButton.action.IsPressed() && _playerJumpReference.IsGrounded();
     }
 
     private void Update()

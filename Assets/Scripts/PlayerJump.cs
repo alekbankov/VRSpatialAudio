@@ -60,7 +60,7 @@ public class PlayerJump : MonoBehaviour
     private void Update()
     {
         
-        if (jumpButton.action.WasPerformedThisFrame() && isGrounded())
+        if (jumpButton.action.WasPerformedThisFrame() && IsGrounded())
         {
             Jump();
             PlayJumpSound();
@@ -84,7 +84,7 @@ public class PlayerJump : MonoBehaviour
         
     }
     
-    public bool isGrounded()
+    public bool IsGrounded()
     {
         return Physics.CheckSphere(transform.position, 0.2f, groundLayers);
     }
@@ -109,7 +109,7 @@ public class PlayerJump : MonoBehaviour
 
     private bool isWalking()
     {
-        return walkButton.action.IsPressed() && isGrounded();
+        return walkButton.action.IsPressed() && IsGrounded();
     }
     
     public void SwapFootsteps(FootstepCollection collection) {

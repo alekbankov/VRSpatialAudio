@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class FootstepsSwapper : MonoBehaviour
 {
-    //private TerrainChecker checker;
+    private TerrainChecker checker;
     private string currentLayer;
     private PlayerJump _playerJump;
     public FootstepCollection[] terrainFootstepCollection;
@@ -16,7 +16,7 @@ public class FootstepsSwapper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //checker = new TerrainChecker();
+        checker = new TerrainChecker();
         _characterController = GetComponent<CharacterController>();
         _playerJump = GetComponent<PlayerJump>();
     }
@@ -24,11 +24,11 @@ public class FootstepsSwapper : MonoBehaviour
     public void CheckLayers() {
         RaycastHit hit;
         if(Physics.Raycast(_characterController.transform.position + Vector3.up, Vector3.down, out hit, 2)){
-            if(hit.collider.tag != null)
+            if(hit.transform.GetComponent<Terrain>() != null)
             {
-                String tag = hit.collider.tag;
-                if(currentLayer != tag){
-                    currentLayer = tag;
+                Terrain t = hit.transform.GetComponent<Terrain>();
+                if(currentLayer != checker.GetLayerName(_characterController.transform.position, t)){
+                    currentLayer = checker.GetLayerName(_characterController.transform.position, t);
                     foreach(FootstepCollection collection in terrainFootstepCollection){
                         if (currentLayer == collection.name){
                             _playerJump.SwapFootsteps(collection);
