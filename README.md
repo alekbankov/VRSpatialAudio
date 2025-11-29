@@ -1,164 +1,161 @@
-🎧 VR Spatial Audio Tech Demo
+# 🎧 VR Spatial Audio Tech Demo  
+**Immersive XR Experience Focused on Spatialized Audio**
 
-Immersive XR Experience Focused on Spatialized Audio
+This Unity project is a VR Tech Demo showcasing how **spatialized audio** can dramatically enhance immersion in virtual environments.  
+While most VR titles focus solely on visuals, this prototype highlights the often underutilized power of **360° soundscapes** delivered through VR headsets.  
+:contentReference[oaicite:0]{index=0}
 
-This Unity project is a VR Tech Demo showcasing how spatialized audio can dramatically enhance immersion in virtual environments.
-While most VR titles focus on visuals, this prototype highlights the often underutilized power of 360° soundscapes delivered through VR headsets.
+---
 
+## 📌 Elevator Pitch  
+Virtual reality is more than 360° visuals—it's also **360° audio**.  
+This demo demonstrates how spatialized sound, terrain-aware footsteps, ambient regions, and reactive audio cues can make even a simple world feel alive.  
+:contentReference[oaicite:1]{index=1}
 
-🎯 Elevator Pitch
+---
 
-Virtual reality is more than 360° visuals—it's also 360° audio.
-This project demonstrates how spatialized sound, terrain-aware footsteps, ambient regions, and reactive audio cues can make even a simple world feel alive.
+# 🗺 Project Overview
 
+## 📝 Concept  
+A VR experience designed to highlight the impact of spatial audio in open-world-like environments.  
+:contentReference[oaicite:2]{index=2}
 
-🗺 Project Overview
-📝 Concept
+## 👥 Target Audience  
+- Game developers  
+- VR audio researchers  
+- Enthusiasts exploring immersive audio design  
+:contentReference[oaicite:3]{index=3}
 
-A VR experience designed to highlight the impact of spatial audio in open-world-like environments.
+## 🧭 Genre & Setting  
+- **Genre:** Immersive VR Experience  
+- **Setting:** Natural landscapes (forest, desert, snow mountains, rivers)  
+- **World:** Open, free-roam environment  
+:contentReference[oaicite:4]{index=4}
 
+## 🕹 Player  
+Standard XR Origin rig using generic VR controllers.  
+:contentReference[oaicite:5]{index=5}
 
-👥 Target Audience
+---
 
-Game developers
+# 🔊 Core Features
 
-VR audio researchers
+## 🔉 1. Advanced Spatial Audio System  
+Uses the **Meta XR Audio SDK** to spatialize all audio sources via the `SpatializerMixer`.  
+Includes realistic **distance-based volume rolloff** to emulate real-world sound attenuation.  
+:contentReference[oaicite:6]{index=6}
 
-Enthusiasts exploring immersive audio design
+---
 
-
-🧭 Genre & Setting
-
-Genre: Immersive VR Experience
-
-Setting: Natural landscapes (forest, desert, snow mountains, rivers)
-
-World: Open, free-roam environment
-
-
-🕹 Player
-
-Standard XR Origin rig using generic VR controllers.
-
-
-🔊 Core Features
-🎼 1. Advanced Spatial Audio System (Meta XR Audio SDK)
-
-The experience uses the Meta XR Audio SDK to spatialize all audio sources using the SpatializerMixer.
-It also applies distance-based rolloff to simulate real-world attenuation.
-
-
-👣 2. Terrain-Specific Footstep System
-
+## 👣 2. Terrain-Specific Footstep System  
 As the player walks, the system:
 
-Detects the terrain texture under the player using alphamap data
+1. Detects the **terrain texture** under the player  
+2. Matches it with a **FootstepCollection** (ScriptableObject)  
+3. Plays a random footstep sound for that terrain  
+4. Handles **jump** and **landing** sounds  
+5. Outputs sounds spatially from **beneath the player**  
 
-Matches it with a FootstepCollection ScriptableObject
+Multiple clips per terrain type create natural variation.  
+:contentReference[oaicite:7]{index=7}
 
-Plays a random footstep sound of the appropriate type
+### Supported Terrain Types  
+- Dirt  
+- Grass (multiple variations)  
+- Sand  
+- Snow  
+- Water  
 
-Includes separate jump and landing sounds
+---
 
-Multiple footstep sounds are grouped per terrain type to avoid repetition and improve naturalism.
-These sounds are spatialized to originate from below the player, enhancing embodiment.
+## 🌲 3. Zone-Specific Ambient Audio  
 
+The world contains 4 distinct sound regions:  
+:contentReference[oaicite:8]{index=8}
 
-Terrain types implemented:
+| Zone | Ambient Audio |
+|------|---------------|
+| **Forest** | Birds, wind in trees |
+| **Desert** | Sandstorm ambience |
+| **Snow Mountain** | Strong winds, snowfall |
+| **Water Bodies** | Flowing water currents |
 
-Dirt
+All ambient audio is spatialized and distance-attenuated.
 
-Grass (multiple variations)
+---
 
-Sand
+## 🪨 4. Terrain-Aware Interaction Audio  
+Players can pick up small rocks and throw them.  
+On impact, the system detects the **terrain type** and plays the appropriate landing audio.  
+:contentReference[oaicite:9]{index=9}
 
-Snow
+---
 
-Water
+## 🏹 5. Bow & Arrow VR Interaction  
+- Fully interactable bow  
+- Pull, tension, release  
+- Spatialized bowstring pluck  
+- Spatialized arrow impact  
+:contentReference[oaicite:10]{index=10}
 
-🌲 3. Zone-Specific Ambient Audio
+---
 
-The world is divided into 4 sound zones, each with unique spatial ambient soundscapes:
+# 🎮 Gameplay & Mechanics
 
+## 🚶 Character Movement  
+Controlled via VR controllers:  
+- Left stick → locomotion  
+- Right stick → rotation  
+- “B” button → jump  
+- Movement direction follows head orientation  
+:contentReference[oaicite:11]{index=11}
 
-Zone	Ambient Audio
-Forest	Birds, wind through trees
-Desert	Approaching sandstorm
-Snow Mountain	Strong winds, snowfall
-Water Bodies	Flowing rivers, currents
+Enables smooth free-axis navigation of the whole environment.
 
-All ambient audio sources use distance-based VR spatialization.
+---
 
-🪨 4. Terrain-Aware Physics Interactions
+# 🎨 World & Atmosphere
 
-Players can pick up small rocks and throw them.
-Upon impact, the audio system detects the terrain type at the collision point and plays the correct “landing” sound.
+## 🌿 Look & Feel  
+A calm VR stroll through nature designed primarily as a **canvas for audio immersion**.  
+:contentReference[oaicite:12]{index=12}
 
+## 📍 Locations  
+Each zone features:  
+- Distinct ambient audio  
+- Unique footstep sets  
+- Terrain-based physics audio  
+- Natural environmental sounds  
+:contentReference[oaicite:13]{index=13}
 
-🏹 5. Bow & Arrow VR Interaction
+---
 
-Fully interactable VR bow
+# 📦 Assets Included  
+As described in the GDD:  
+:contentReference[oaicite:14]{index=14}
+- Bow system  
+- Arrow mechanics  
+- XR Origin setup  
+- Unity Terrain system  
 
-Pull, tension, release
+---
 
-Spatialized bowstring pluck
+# ⚙️ Technical Highlights
+- ✔ Meta XR Audio SDK (SpatializerMixer)  
+- ✔ ScriptableObject-driven footstep data  
+- ✔ Runtime alphamap terrain sampling  
+- ✔ Randomized non-repeating audio playback  
+- ✔ Dynamic footstep swapping  
+- ✔ VR interaction systems (pickup, throwing, bow)  
+- ✔ Spatialized ambience and collisions  
 
-Spatialized arrow hit sounds
+---
 
+# 📘 License  
+MIT
 
-🎮 Gameplay & Mechanics
-🚶 Character Movement
+---
 
-Movement is controlled via VR controllers:
+# 🙌 Credits  
+Developed by **Aleksandar Bankov**
 
-Left stick → locomotion
-
-Right stick → rotation
-
-“B” button → jump
-
-Camera direction based on the player’s head
-
-
-This allows free 3-axis exploration of the world.
-
-🎨 World & Atmosphere
-🌿 Look & Feel
-
-A calm, meditative VR stroll through nature.
-The world serves primarily as a canvas for spatial audio.
-
-
-📍 Locations
-
-Each zone has:
-
-Unique ambience
-
-Terrain-appropriate footsteps
-
-Terrain-based physics audio
-
-Distinct environmental audio feedback
-
-
-📦 Assets Used
-
-From the GDD:
-
-Bow system
-
-Arrow system
-
-XR Origin
-
-Unity Terrain
-
-
-⚙️ Technical Highlights
-✔ Meta XR Audio SDK (SpatializerMixer)
-✔ ScriptableObject-based data for footsteps
-✔ Runtime terrain texture sampling
-✔ Randomized non-repeating audio playback
-✔ VR interaction systems (bow, object pickup)
-✔ Environment-triggered audio cues
