@@ -66,8 +66,8 @@ crashlytics-build.properties
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
-/Assets/External Assets/BOKI/LowPolyNature/Terrain/data/
 # Temporary auto-generated Android Assets
+/Assets/External Assets/BOKI/LowPolyNature/Terrain/data/
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
